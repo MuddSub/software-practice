@@ -4,7 +4,7 @@ Float = 0.0
     
 
 
-class rospy:
+class ros:
     def __init__(self):
         self.connected = False
         self.callback = None
@@ -16,5 +16,6 @@ class rospy:
 
     def update(self, depth):
         if self.connected:
-            sensor.generate_data(self.callback, )
+            sensor.generate_data(self.callback, depth)
 
+rospy = ros()

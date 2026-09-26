@@ -1,8 +1,11 @@
-import fake_ros
+from fake_ros import rospy, Float
+
 
 class Control:
-    def __init__(self):
+    def __init__(self, desired_depth):
         pass
 
     def get_power(self):
-        pass
+        """1200 is the default (no power, neutrally bouyant)
+        higher numbers make it go up (less depth)"""
+        return 1200
